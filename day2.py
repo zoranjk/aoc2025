@@ -1,3 +1,6 @@
+from time import time
+
+
 def has_equal_halves(num: int) -> bool:
     str_num = str(num)
     # odd length can't have equal halves
@@ -54,6 +57,7 @@ def p2(ranges) -> int:
 
 
 if __name__ == "__main__":
+    start = time()
 
     with open("day2.txt", "r") as f:
         lines = f.read().strip().split(",")
@@ -62,3 +66,6 @@ if __name__ == "__main__":
 
     print(p1(ranges))
     print(p2(ranges))
+
+    end = time()
+    print(f"Execution time: {end - start} seconds")
